@@ -1,0 +1,239 @@
+@import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700);
+body{
+		font-family: 'Dosis', sans-serif;
+		font-size:14px;
+} 
+header{
+	background:url(../images/header.jpg) center 0 repeat;
+	text-align:center;
+}
+.navBg{
+	background:#ffffff;
+	height:50px;	
+}
+.click-nav{
+	margin-top:8px;
+}
+.projectInfo{
+	background:#fff;
+	/*background:url(../images/whiteTrans.png) 0 0 repeat;*/
+	padding: 30px 25px;
+	text-align: left;
+}
+.projectList li a img{
+	border-radius: 5px 5px 0 0;
+}
+.projectInfo{
+	border-radius: 0 0 5px 5px;	
+	font-family: 'Dosis', sans-serif;
+	font-weight: 200;
+	font-size:20px;
+	width: 170px;
+	text-transform: uppercase;
+	line-height: 24px;
+}
+.contentWrap{
+	background:#ffffff;
+}
+.homeBody .contentWrap{
+	background:#cccccc url(../images/homeContentBg.png) 0 0 repeat-x;
+	padding-top:70px;
+}
+.contentWrap h2{
+	color:#ed1165;
+	font-size:60px;	
+	font-weight:600;
+	margin-bottom:15px;
+}
+
+
+
+/*dropdown css*/
+.click-nav ul {
+	position:relative;
+	font-weight:900;
+}
+.click-nav ul li {
+	position:relative;
+	list-style:none;
+	cursor:pointer;
+	color:#838383;
+}
+.click-nav ul li a:hover{
+	color:#000;
+
+}
+.click-nav ul li ul {
+	margin-left:0;
+	z-index:1	
+	}
+.click-nav ul .clicker {
+	background:url(../images/menu.jpg) 0 0 no-repeat;
+	padding-bottom:8px;
+	margin-left: 10px;
+	width:40px;
+	 
+}
+.click-nav img {
+	position:absolute;
+	top:9px;
+	left:12px;
+}
+.click-nav ul li a {
+	transition:background-color 0.2s ease-in-out;
+	-webkit-transition:background-color 0.2s ease-in-out;
+	-moz-transition:background-color 0.2s ease-in-out;
+	display:inline-block;
+	padding:8px 10px 5px 0px;
+	background:#FFF;
+	color:#838383;
+	text-decoration:none;
+}
+.click-nav ul li{
+	font-weight:600;
+	display:inline-block ;
+}
+.click-nav ul li ul li ul li{
+	font-weight: 200;
+	 
+
+}
+.click-nav ul{
+	margin-left:15px;
+} 
+.click-nav ul li > .mainDrop {
+	position: relative;
+	background: #fff;
+	margin-top:30px;
+	padding: 25px 30px;
+	font-family: 'Dosis', sans-serif;
+	font-weight: 200;
+	font-size:20px;
+	min-height:380px;
+	border-radius:5px;
+	border-bottom:38px solid #000;
+	width:815px;
+}
+.click-nav ul li > ul li ul{
+	padding:0;
+	margin-top:0;
+}
+ 
+.click-nav ul li .mainDrop:after, .click-nav ul li .mainDrop:before {
+	bottom: 100%;
+	left: 4%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.click-nav ul li .mainDrop:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #fff;
+	border-width: 15px;
+	margin-left: -15px;
+}
+.click-nav ul li .mainDrop:before {
+	border-color: #fff;
+ 
+}
+
+/* Fallbacks */
+.click-nav .no-js ul {
+	display:none; 
+	border-radius:10px;
+	}
+.click-nav .no-js:hover ul {
+	display:block;
+	}
+ 
+.click-nav ul li > .mainDrop li{
+	width:240px;
+	float:left;	
+	margin-right:30px;
+}
+.click-nav ul li .subLinks li a{
+	color:#838383;	
+}
+
+/*inner page css*/
+.projectDetails{
+	background:#fff;
+}
+.projectDetails h3{
+	font-size:23px;
+	font-weight:300;
+	text-transform:uppercase;
+}
+.projectName{
+	display:block;
+	float:left;
+	margin-right:35px;
+}
+
+.projectDetails .projectCategory{
+	display:block;
+	float:left;
+}
+.projectContent{
+	background:#cccccc url(../images/contentBg.png) 0 0 repeat-x;
+	padding:20px 50px;
+	text-align:center;
+}
+.grid li a{
+	color:#666;
+}
+.grid li a:hover{
+	text-decoration:none;
+}
+.slideShowHead{
+	background:#ffffff;
+	height:58px;
+}
+.slideShowHead h2{
+		line-height:58px;
+}
+.slideShowImg .cycle-slideshow{
+	background:url(../images/lightboxBg.png) 0 0 repeat-x;
+	padding: 30px 50px;
+	overflow: hidden;
+	text-align: center;
+}
+.fancybox-overlay{
+	background:url(../images/overlay.png) 0 0 repeat;
+}
+.slideShowPager img{
+	height:100px;
+	margin:10px;
+}
+.fancybox-skin{
+	padding:0;
+}
+.fancybox-inner{
+	width:940px !important;
+	height:auto !important;
+}
+.slideShowImg{
+	width:620px;
+	float:left;
+}
+.slideShowImg h2{
+	margin:0;
+}
+
+.slideShowPager {
+	background:#ffffff;
+	width:245px;
+	padding:20px;
+	float:right;
+}
+/*custom fancybox*/
+.fancybox-skin, .fancybox-opened .fancybox-skin{
+	background:none;
+	box-shadow:none;
+	padding:0;
+	margin:0;
+}
