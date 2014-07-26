@@ -4,7 +4,7 @@ body{
 		font-size:14px;
 } 
 header{
-	background:url("/wp-content/uploads/2014/07/headerBg.jpg") center 0 repeat;
+	background:url(http://mywordpress.com/wp-content/themes/the-bootstrap/img/headerBg.jpg) center 0 repeat;
 	text-align:center;
 }
 .navBg{
@@ -36,7 +36,7 @@ header{
 	background:#ffffff;
 }
 .homeBody .contentWrap{
-	background:#cccccc url("/wp-content/uploads/2014/07/homeContentBg.png") 0 0 repeat-x;
+	background:#cccccc url(http://mywordpress.com/wp-content/themes/the-bootstrap/img/homeContentBg.png) 0 0 repeat-x;
 	padding-top:70px;
 }
 .contentWrap h2{
@@ -68,7 +68,7 @@ header{
 	z-index:1	
 	}
 .click-nav ul .clicker {
-	background:url("/wp-content/uploads/2014/07/menu.jpg") 0 0 no-repeat;
+	background:url(http://mywordpress.com/wp-content/themes/the-bootstrap/img/menu.jpg) 0 0 no-repeat;
 	padding-bottom:8px;
 	margin-left: 10px;
 	width:40px;
@@ -179,7 +179,7 @@ header{
 	float:left;
 }
 .projectContent{
-	background:#cccccc url("/wp-content/uploads/2014/07/contentBg.png") 0 0 repeat-x;
+	background:#cccccc url(http://mywordpress.com/wp-content/themes/the-bootstrap/img/contentBg.png) 0 0 repeat-x;
 	padding:20px 50px;
 	text-align:center;
 }
@@ -195,22 +195,51 @@ header{
 }
 .slideShowHead h2{
 		line-height:58px;
+		font-size:20px;
+		padding-left:55px;
+		font-family: 'Dosis', sans-serif;
+		font-weight: 200;
+		text-transform:uppercase;
+}
+.projectLogo{
+	float:left;
+	margin-right:20px;
+}
+.projectLogo img{
+	width:35px;
+	height:35px;
+}
+.slideShowHead h2 span{
+	display:block;
+	float:left;
+	margin-right:40px;
 }
 .slideShowImg .cycle-slideshow{
-	background:url("/wp-content/uploads/2014/07/lightboxBg.png") 0 0 repeat-x;
-	padding: 30px 50px;
+	background:#979797 url(http://mywordpress.com/wp-content/themes/the-bootstrap/img/lightboxBg.png) 0 0 repeat-x;
+	padding: 30px 50px 0;
 	overflow: hidden;
 	text-align: center;
 }
 .fancybox-overlay{
-	background:url("/wp-content/uploads/2014/07/overlay.png") 0 0 repeat;
+	background:url(http://mywordpress.com/wp-content/themes/the-bootstrap/img/overlay.png) 0 0 repeat;
 }
-.slideShowPager img{
+.slidePager img{
 	height:100px;
 	margin:10px;
+	border-radius: 10px;
+	cursor: pointer;
 }
 .fancybox-skin{
 	padding:0;
+}
+.slideImg{
+	text-align:center;
+	width:620px;
+	padding:20px 0 0;
+}
+.slideImg img{
+	width:580px;
+	height:auto;
 }
 .fancybox-inner{
 	width:940px !important;
@@ -236,4 +265,12 @@ header{
 	box-shadow:none;
 	padding:0;
 	margin:0;
+}
+.slideShowPager .photosInfo h3{
+	font-size: 22px;
+	font-family: 'Dosis', sans-serif;
+	line-height: 30px;
+	font-weight: 200;
+	text-transform: uppercase;;
+
 }

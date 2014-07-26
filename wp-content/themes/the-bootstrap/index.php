@@ -1,12 +1,4 @@
 
-
-<?php
-/**
- * Template Name: projects Page
- *
- * Selectable from a dropdown menu on the edit page screen.
- */
-?>
 <?php
 /** index.php
  *
@@ -47,28 +39,26 @@ get_header(); ?>
           <h2>WORK</h2>  
           <ul class="grid effect-2 projectList" id="grid">
               <?php  
-              $type = 'projects';
-                $args=array(
-                    'post_type' => $type,
-                    'post_status' => 'publish',
-                     );
-                
-                    $my_query = null;
-                    $my_query = new WP_Query($args);
-                                
-                    if( $my_query->have_posts() ) {
-                        
-                      while ($my_query->have_posts()) :
-             
-                           $my_query->the_post();
-                    
-                     
+//            //           
+                        query_posts('section_name=projects1');
+                        if( have_posts() ) {
+                        while ( have_posts()) :the_post() ;
+                                                        
+                                                        
+
                         ?>
               
-                       <li class="work">
-                           <a class="various" href="/wp-includes/images/media/default.png" ><?php echo get_the_post_thumbnail($post->ID);?></a>
+                       <li class="work"> 
+                           <a class="various" href="#<?php echo $post->post_name;?>">
+                                <?php echo get_the_post_thumbnail($post->ID);?>
                                 <div class="projectInfo"> <span><?php echo $post->post_title; ?></span> </div>
-                            </li>
+                           </a>
+                           <div id="<?php  echo $post->post_name;?>" style="display: none">
+                           <?php echo the_content();?>
+                            </div>
+                        </li>
+                        
+                            
                                                 
                         <?php
                     
