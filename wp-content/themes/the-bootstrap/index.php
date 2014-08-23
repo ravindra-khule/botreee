@@ -17,61 +17,76 @@
 
 get_header(); ?>
 
- <div id="container"> 
-    <nav class="navBg">
+<div id="container">
+  <nav>
     <div class="container">
-      <div class="click-nav">
-        <ul class="no-js clearfix">
-          <li> <a href="#" class="clicker">&nbsp;</a>
-            <ul class="mainDrop clearfix">
-            <?php
-                wp_nav_menu();
-            ?>
+      <ul id="filter" class="dropdown">
+       <li id="work" class="dropdown filter"> 
+        <i class="menuBg"></i>
+          <ul class="sub-menu1">
+            <li>
+              <label>Work</label>
+                <ul>
+                    <?php
+                    $category_ids = get_all_category_ids();
+                    foreach($category_ids as $cat_id) {
+                      $cat_name = get_cat_name($cat_id);
+                      ?>
+                     <li><a href="#" data-group="<?php echo $cat_name;?>"><?php echo $cat_name;?></a></li>
+                      <?php
+                    }
+                    ?> 
+                </ul>              
+            </li>
+            <li>
+              <ul>   
+                <?php wp_nav_menu(); ?>
+              </ul>
+            </li>
+            <li>
+              <ul> 
+                <?php $args = array( 'menu' => 'about-us');?>
+                <?php wp_nav_menu($args); ?>
+              </ul>
+            </li>
+           
             </ul>
           </li>
         </ul>
       </div>
-    </div>
+   
   </nav>
 <div class="contentWrap">
     <div class="container">
-      <div  id="portfolio">
-          <h2>WORK</h2>  
-          <ul class="grid effect-2 projectList" id="grid">
+    <h2>WORK</h2>
+      <div id="portfolio">
+          <div class="grid effect-2 projectList" id="grid">
               <?php  
 //            //           
-                        query_posts('section_name=projects1');
-                        if( have_posts() ) {
-                        while ( have_posts()) :the_post() ;
-                                                        
-                                                        
-
-                        ?>
+                query_posts('section_name=projects1');
+                if( have_posts() ) {
+                while ( have_posts()) :the_post() ;
+                ?>
+              <?php $category =get_the_category( $post->ID ); ?>
               
-                       <li class="work"> 
-                           <a class="various" href="#<?php echo $post->post_name;?>">
-                                <?php echo get_the_post_thumbnail($post->ID);?>
-                                <div class="projectInfo"> <span><?php echo $post->post_title; ?></span> </div>
-                           </a>
-                           <div id="<?php  echo $post->post_name;?>" style="display: none">
-                           <?php echo the_content();?>
-                            </div>
-                        </li>
-                        
-                            
-                                                
-                        <?php
-                    
-                     
-                      endwhile;
-                    }
-             
-                    wp_reset_query();
-              
+              <div class="work item" data-groups='["All", "<?php echo $category[0]->cat_name; ?>"]'>
+               
+                   <a class="various" href="#<?php echo $post->post_name;?>">
+                        <?php echo get_the_post_thumbnail($post->ID);?>
+                        <div class="projectInfo"> <span><?php echo $post->post_title; ?></span> </div>
+                   </a>
+                   <div id="<?php  echo $post->post_name;?>" style="display: none">
+                       <div id="inline">
+                   <?php echo the_content();?>
+                           </div>
+                    </div>
+              </div>
+                 <?php
+                  endwhile;
+                }             
+                wp_reset_query();              
               ?>
-          </ul>
-          
-          
+          </div>
           </div>
     </div>
   </div>

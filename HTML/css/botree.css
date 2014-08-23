@@ -20,8 +20,12 @@ header{
 	padding: 30px 25px;
 	text-align: left;
 }
-.projectList li a img{
+/*.projectList li.hide{*/
+    /*display: none;*/
+/*}*/
+.projectList .work img{
 	border-radius: 5px 5px 0 0;
+
 }
 .projectInfo{
 	border-radius: 0 0 5px 5px;	
@@ -183,10 +187,10 @@ header{
 	padding:20px 50px;
 	text-align:center;
 }
-.grid li a{
+.grid .work a{
 	color:#666;
 }
-.grid li a:hover{
+.grid .work a:hover{
 	text-decoration:none;
 }
 .slideShowHead{
@@ -274,3 +278,10 @@ header{
 	text-transform: uppercase;;
 
 }
+.item{
+    margin: 15px 15px 0 0;
+  }
+  #portfolio{
+	position: relative;
+
+  }

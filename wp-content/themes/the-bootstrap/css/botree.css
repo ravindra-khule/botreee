@@ -1,32 +1,164 @@
-@import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700);
+/*@import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700);*/
+//
+@font-face {
+    font-family: 'dosisbold';
+    src: url('http://mywordpress.com/wp-content/themes/the-bootstrap/fonts/dosis-bold-webfont.eot');
+    src: url('http://mywordpress.com/wp-content/themes/the-bootstrap/fonts/dosis-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://mywordpress.com/wp-content/themes/the-bootstrap/fonts/dosis-bold-webfont.woff') format('woff'),
+         url('http://mywordpress.com/wp-content/themes/the-bootstrap/fonts/dosis-bold-webfont.ttf') format('truetype'),
+         url('http://mywordpress.com/wp-content/themes/the-bootstrap/fonts/dosis-bold-webfont.svg#dosisbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'dosislight';
+    src: url('http://mywordpress.com/wp-content/themes/the-bootstrap/fonts/dosis-light-webfont.eot');
+    src: url('http://mywordpress.com/wp-content/themes/the-bootstrap/fonts/dosis-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://mywordpress.com/wp-content/themes/the-bootstrap/fonts/dosis-light-webfont.woff') format('woff'),
+         url('http://mywordpress.com/wp-content/themes/the-bootstrap/fonts/dosis-light-webfont.ttf') format('truetype'),
+         url('http://mywordpress.com/wp-content/themes/the-bootstrap/fonts/dosis-light-webfont.svg#dosislight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'dosisregular';
+    src: url('http://mywordpress.com/wp-content/themes/the-bootstrap/fonts/dosis-regular-webfont.eot');
+    src: url('http://mywordpress.com/wp-content/themes/the-bootstrap/fonts/dosis-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://mywordpress.com/wp-content/themes/the-bootstrap/fonts/dosis-regular-webfont.woff') format('woff'),
+         url('http://mywordpress.com/wp-content/themes/the-bootstrap/fonts/dosis-regular-webfont.ttf') format('truetype'),
+         url('http://mywordpress.com/wp-content/themes/the-bootstrap/fonts/dosis-regular-webfont.svg#dosisregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body{
-		font-family: 'Dosis', sans-serif;
-		font-size:14px;
+	font-family: 'dosislight';
+	font-size:14px;
+	background:#ccc;
+	min-height:768px;
 } 
 header{
 	background:url(http://mywordpress.com/wp-content/themes/the-bootstrap/img/headerBg.jpg) center 0 repeat;
 	text-align:center;
 }
-.navBg{
-	background:#ffffff;
-	height:50px;	
-}
-.click-nav{
-	margin-top:8px;
-}
+
 .projectInfo{
 	background:#fff;
-	/*background:url(../images/whiteTrans.png) 0 0 repeat;*/
+	/*background:url(http://mywordpress.com/wp-content/themes/the-bootstrap/img/whiteTrans.png) 0 0 repeat;*/
 	padding: 30px 25px;
 	text-align: left;
 }
-.projectList li a img{
+
+/*Navigatin*/
+#container .menuBg{
+	background:url(http://mywordpress.com/wp-content/themes/the-bootstrap/img/menu.jpg) 0 0 no-repeat;
+	width:51px;
+	height:40px;
+	display:block;
+	float:left;
+	margin-top: 8px;
+	cursor:pointer;
+	position:relative;
+	z-index:5;
+}
+#container nav{
+	background:#ffffff;
+	height:50px;
+	position:relative;	
+}
+nav .sub-menu1{
+	width: 760px;
+	padding-right: 0;
+}
+nav ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+	font-family: 'dosislight';
+	font-size:19px;
+}
+nav ul li {
+    display:inline-block;
+    position:relative;
+	float:left;
+	line-height:50px;
+}
+/* sub navigation */
+nav li ul {    
+    position:absolute;
+    left:0;
+    top:30px; /* make this equal to the line-height of the links (specified below) */
+	z-index:4;
+	padding:40px 40px 10px 40px;
+	background:#ffffff url(http://mywordpress.com/wp-content/themes/the-bootstrap/img/whiteArrow.png) 0 0 no-repeat;
+	border-bottom:solid 35px #000;
+}
+nav li li {
+    position:relative;
+    display:block;
+	width:250px;
+	line-height:normal;
+}
+nav li li a{
+	color:#838383;
+    margin:0 0 10px 0;
+	display:inline-block;
+	line-height:20px;
+} 
+nav li li ul {
+    position:absolute;
+    top:0;
+    left:200px; /* make this equal to the width of the sub nav above */
+    margin:0;
+}
+nav li ul li ul{
+	float: left;
+	padding: 0;
+	position: relative;
+	left: 0;
+	border-bottom:none;
+}
+/* style all links */
+nav a {
+    color:#000;
+    text-decoration:none;
+    display:block;
+}
+nav a:hover,
+nav a:focus,
+nav a:active,
+nav li li .strong:hover {
+    color:rgb(50,50,50);
+	text-decoration:none;
+}
+nav li li label, nav li li .strong{
+	font-size:20px;
+	font-family: 'dosisbold';
+	margin-bottom:10px;
+	color:#838383;
+}
+nav li li .mainLink{
+	color:#000;
+}
+/* style sub level links */
+ 
+ 
+
+
+
+
+
+/*.projectList li.hide{*/
+    /*display: none;*/
+/*}*/
+ 
+.projectList .work img{
 	border-radius: 5px 5px 0 0;
+
 }
 .projectInfo{
 	border-radius: 0 0 5px 5px;	
-	font-family: 'Dosis', sans-serif;
-	font-weight: 200;
+	font-family: 'dosislight';
 	font-size:20px;
 	width: 170px;
 	text-transform: uppercase;
@@ -40,123 +172,11 @@ header{
 	padding-top:70px;
 }
 .contentWrap h2{
+	font-family: 'dosisbold';
 	color:#ed1165;
 	font-size:60px;	
 	font-weight:600;
-	margin-bottom:15px;
-}
-
-
-
-/*dropdown css*/
-.click-nav ul {
-	position:relative;
-	font-weight:900;
-}
-.click-nav ul li {
-	position:relative;
-	list-style:none;
-	cursor:pointer;
-	color:#838383;
-}
-.click-nav ul li a:hover{
-	color:#000;
-
-}
-.click-nav ul li ul {
-	margin-left:0;
-	z-index:1	
-	}
-.click-nav ul .clicker {
-	background:url(http://mywordpress.com/wp-content/themes/the-bootstrap/img/menu.jpg) 0 0 no-repeat;
-	padding-bottom:8px;
-	margin-left: 10px;
-	width:40px;
-	 
-}
-.click-nav img {
-	position:absolute;
-	top:9px;
-	left:12px;
-}
-.click-nav ul li a {
-	transition:background-color 0.2s ease-in-out;
-	-webkit-transition:background-color 0.2s ease-in-out;
-	-moz-transition:background-color 0.2s ease-in-out;
-	display:inline-block;
-	padding:8px 10px 5px 0px;
-	background:#FFF;
-	color:#838383;
-	text-decoration:none;
-}
-.click-nav ul li{
-	font-weight:600;
-	display:inline-block ;
-}
-.click-nav ul li ul li ul li{
-	font-weight: 200;
-	 
-
-}
-.click-nav ul{
-	margin-left:15px;
-} 
-.click-nav ul li > .mainDrop {
-	position: relative;
-	background: #fff;
-	margin-top:30px;
-	padding: 25px 30px;
-	font-family: 'Dosis', sans-serif;
-	font-weight: 200;
-	font-size:20px;
-	min-height:380px;
-	border-radius:5px;
-	border-bottom:38px solid #000;
-	width:815px;
-}
-.click-nav ul li > ul li ul{
-	padding:0;
-	margin-top:0;
-}
- 
-.click-nav ul li .mainDrop:after, .click-nav ul li .mainDrop:before {
-	bottom: 100%;
-	left: 4%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-}
-
-.click-nav ul li .mainDrop:after {
-	border-color: rgba(136, 183, 213, 0);
-	border-bottom-color: #fff;
-	border-width: 15px;
-	margin-left: -15px;
-}
-.click-nav ul li .mainDrop:before {
-	border-color: #fff;
- 
-}
-
-/* Fallbacks */
-.click-nav .no-js ul {
-	display:none; 
-	border-radius:10px;
-	}
-.click-nav .no-js:hover ul {
-	display:block;
-	}
- 
-.click-nav ul li > .mainDrop li{
-	width:240px;
-	float:left;	
-	margin-right:30px;
-}
-.click-nav ul li .subLinks li a{
-	color:#838383;	
+	margin-bottom:30px;
 }
 
 /*inner page css*/
@@ -183,10 +203,10 @@ header{
 	padding:20px 50px;
 	text-align:center;
 }
-.grid li a{
+.grid .work a{
 	color:#666;
 }
-.grid li a:hover{
+.grid .work a:hover{
 	text-decoration:none;
 }
 .slideShowHead{
@@ -197,7 +217,7 @@ header{
 		line-height:58px;
 		font-size:20px;
 		padding-left:55px;
-		font-family: 'Dosis', sans-serif;
+		font-family: 'dosislight';
 		font-weight: 200;
 		text-transform:uppercase;
 }
@@ -229,24 +249,17 @@ header{
 	border-radius: 10px;
 	cursor: pointer;
 }
-.fancybox-skin{
-	padding:0;
-}
 .slideImg{
 	text-align:center;
-	width:620px;
+	width:720px;
 	padding:20px 0 0;
 }
 .slideImg img{
 	width:580px;
 	height:auto;
 }
-.fancybox-inner{
-	width:940px !important;
-	height:auto !important;
-}
 .slideShowImg{
-	width:620px;
+	width:720px;
 	float:left;
 }
 .slideShowImg h2{
@@ -259,18 +272,192 @@ header{
 	padding:20px;
 	float:right;
 }
-/*custom fancybox*/
-.fancybox-skin, .fancybox-opened .fancybox-skin{
-	background:none;
-	box-shadow:none;
-	padding:0;
-	margin:0;
-}
+
 .slideShowPager .photosInfo h3{
 	font-size: 22px;
-	font-family: 'Dosis', sans-serif;
+	font-family: 'dosislight';
 	line-height: 30px;
 	font-weight: 200;
 	text-transform: uppercase;;
+}
+.item{
+	margin:0 0 10px 0;
+}
+#portfolio{
+	position: relative;
+}
+#cboxClose{
+	top: 5px;
+	right: 30px;
+}
+#cboxLoadedContent {
+	padding: 0 25px;
+}
+#cboxContent{
+	background:none;
+}
+
+/*custom media queries start*/
+/* Large desktop */
+@media (min-width: 1200px) {
+body{
+	padding:0;
+}
+.container{
+	padding:0 20px;
+}
+#colorbox,
+#cboxWrapper,
+#cboxLoadedContent{
+	width:100% !important;
+	left:0  !important;
+}
+#cboxContent{
+	width:95% !important;
+}
+.slideShowImg{
+	width: 70%;
+	float: left;
+}
+.slideImg{
+	text-align:center;
+	padding:20px 0 0;
+}
+.slideImg{
+	width:90%;
+} 
+.slideImg img{
+	width: 60%;
+}
+.slideShowImg h2{
+	margin:0;
+}
+
+.slideShowPager {
+	background: #ffffff;
+	width: 20%;
+	padding: 20px;
+	float: right;
+}
+.slideShowPager .photosInfo h3{
+	font-size:19px;
+}	
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+body{
+	padding:0;
+}
+.container{
+	padding:0 20px;
+}
+#colorbox,
+#cboxWrapper,
+#cboxLoadedContent{
+	width:100% !important;
+	left:0  !important;
+}
+#cboxContent{
+	width:95% !important;
+}
+.slideShowImg{
+	width: 70%;
+	float: left;
+}
+.slideImg{
+	text-align:center;
+	padding:20px 0 0;
+}
+.slideImg{
+	width:90%;
+} 
+.slideImg img{
+	width: 60%;
+}
+.slideShowImg h2{
+	margin:0;
+}
+
+.slideShowPager {
+	background: #ffffff;
+	width: 20%;
+	padding: 20px;
+	float: right;
+}
+.slideShowPager .photosInfo h3{
+	font-size:16px;
+	line-height:19px;
+}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+body{
+	padding:0;
+}
+.container{
+	padding:0 20px;
+}
+#colorbox,
+#cboxWrapper,
+#cboxLoadedContent{
+	width:100% !important;
+	left:0  !important;
+}
+#cboxContent{
+	width:95% !important;
+}
+.slideShowImg{
+	width: 70%;
+	float: left;
+}
+.slideImg{
+	text-align:center;
+	padding:20px 0 0;
+}
+.slideImg{
+	width:90%;
+} 
+.slideImg img{
+	width: 60%;
+}
+.slideShowImg h2{
+	margin:0;
+}
+
+.slideShowPager {
+	background: #ffffff;
+	width: 20%;
+	padding: 20px;
+	float: right;
+}
+.slideShowPager .photosInfo h3{
+	font-size:19px;
+}
 
 }
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+.slideShowImg {
+	width: 100%;
+	float: left;
+}
+.slideShowHead h2 {
+	line-height: 25px;
+	font-size: 100%;
+	padding-left: 25px;	
+}
+.slideShowPager {
+	width: 86%;
+	margin-top: 30px;
+}
+}
+.main-menu { font-weight: 900; 
+            }
+
+.sub-menu {font-weight: 400;}
+
+.sub-sub-menu{font-weight:100;}
+/*custom media queries end*/

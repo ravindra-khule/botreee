@@ -30,5 +30,27 @@ $(".various").fancybox({
 		closeEffect	: 'none'
 	});
 
-
+    $(".mainDrop ul li a").click(function(event){
+        event.stopPropagation();
+//        $(".projectList li").addClass("hide");
+        $(".projectList li").hide();
+        var cls = $(this).attr("class")+"."+$(this).parents(".filter").attr("id");
+//        $(".projectList li."+cls).removeClass("hide");
+        console.log($(".projectList li."+cls).show());
+        new AnimOnScroll( document.getElementById( 'grid' ), {
+            minDuration : 0.4,
+            maxDuration : 0.7,
+            viewportFactor : 0.2
+        } );
+    });
+    $(".mainDrop li").click(function(){
+        $(".projectList li").addClass("hide");
+        var cls = $(this).attr("class");
+        $(".projectList li."+cls).removeClass("hide");
+        new AnimOnScroll( document.getElementById( 'grid' ), {
+            minDuration : 0.4,
+            maxDuration : 0.7,
+            viewportFactor : 0.2
+        } );
+    });
 });

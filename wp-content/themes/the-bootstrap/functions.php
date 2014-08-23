@@ -16,6 +16,7 @@ function mythemename_all_scriptsandstyles() {
     wp_register_style('bootstrap-responsive', get_stylesheet_directory_uri() . '/css/bootstrap-responsive.css', array(),'2','all');
     wp_register_style('component', get_stylesheet_directory_uri() . '/css/component.css', array(),'2','all');
     wp_register_style('fancybox', get_stylesheet_directory_uri() . '/css/jquery.fancybox.css', array(),'2','all');
+    wp_register_style('colorbox', get_stylesheet_directory_uri() . '/css/colorbox.css', array(),'2','all');
 
     
      wp_register_script ('Jquery', get_stylesheet_directory_uri() . '/js/jquery-1.10.1.min.js', array( 'jquery' ));
@@ -31,8 +32,10 @@ function mythemename_all_scriptsandstyles() {
      wp_register_script ('jqueryfancyboxmedia', get_stylesheet_directory_uri() . '/js/jquery.fancybox-media.js', array( 'jquery' ));
      wp_register_script ('jqueryfancyboxthumbs', get_stylesheet_directory_uri() . '/js/jquery.fancybox-thumbs.js', array( 'jquery' ));
      wp_register_script ('jquery.cycle2', get_stylesheet_directory_uri() . '/js/jquery.cycle2.js', array( 'jquery' ));
+     wp_register_script ('jquery.shuffle.min', get_stylesheet_directory_uri() . '/js/jquery.shuffle.min.js', array( 'jquery' ));
+     wp_register_script ('jquery.colorbox', get_stylesheet_directory_uri() . '/js/jquery.colorbox.js', array( 'jquery' ));
      wp_register_script ('botreejs', get_stylesheet_directory_uri() . '/js/botree.js', array( 'jquery' ));
-    
+     //   jquery.colorbox.js 
      
      
      wp_enqueue_style( 'bootstrap');
@@ -40,6 +43,7 @@ function mythemename_all_scriptsandstyles() {
      wp_enqueue_style( 'component');
      wp_enqueue_style( 'fancybox');
      wp_enqueue_style( 'botree');
+     wp_enqueue_style( 'colorbox');
 
      
      
@@ -56,8 +60,11 @@ function mythemename_all_scriptsandstyles() {
      wp_enqueue_script('masonrypkgdmin');
      wp_enqueue_script('imagesloaded');
      wp_enqueue_script('modernizr.custom');
+     wp_enqueue_script('jquery.shuffle.min');
+     wp_enqueue_script('jquery.colorbox');
      wp_enqueue_script('botreejs');
      
+//     
 
 }
 add_action( 'wp_enqueue_scripts', 'mythemename_all_scriptsandstyles' );
