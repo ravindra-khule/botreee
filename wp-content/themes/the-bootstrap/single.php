@@ -9,34 +9,46 @@
  */
 
 get_header(); ?>
+<div id="container">
+    <nav>
+    <div class="container">
+      <ul class="pull-right">
+          <li><a href="mywordpress.com">Home</a>  </li>
+      </ul>
+    </div>   
+  </nav>
+<div class="contentWrap">
+<div class="container">
+  
+    <div class="row">
+        <section id="primary" class="span8">
 
-<section id="primary" class="span8">
-	
-	<?php tha_content_before(); ?>
-	<div id="content" role="main">
-		<?php tha_content_top();
+                <?php tha_content_before(); ?>
+            <div id="content" role="main" class="well">
+                        <?php tha_content_top();
 
-		while ( have_posts() ) {
-			the_post();
-			get_template_part( '/partials/content', 'single' );
-			comments_template();
-		} ?>
-		
-		<nav id="nav-single" class="pager">
-			<h3 class="assistive-text"><?php _e( 'Post navigation', 'the-bootstrap' ); ?></h3>
-			<span class="next"><?php next_post_link( '%link', sprintf( '%1$s <span class="meta-nav">&rarr;</span>', __( 'Next Post', 'the-bootstrap' ) ) ); ?></span>
-			<span class="previous"><?php previous_post_link( '%link', sprintf( '<span class="meta-nav">&larr;</span> %1$s', __( 'Previous Post', 'the-bootstrap' ) ) ); ?></span>
-		</nav><!-- #nav-single -->
-		
-		<?php tha_content_bottom(); ?>
-	</div><!-- #content -->
-	<?php tha_content_after(); ?>
-</section><!-- #primary -->
+                        while ( have_posts() ) {
+                                the_post();
+                                get_template_part( '/partials/content', 'single' );
+                                comments_template();
+                        } ?>
 
-<?php
-get_sidebar();
-get_footer();
+                        <nav id="nav-single" class="pager">
+                                <h3 class="assistive-text"><?php _e( 'Post navigation', 'the-bootstrap' ); ?></h3>
+                                <span class="next"><?php next_post_link( '%link', sprintf( '%1$s <span class="meta-nav">&rarr;</span>', __( 'Next Post', 'the-bootstrap' ) ) ); ?></span>
+                                <span class="previous"><?php previous_post_link( '%link', sprintf( '<span class="meta-nav">&larr;</span> %1$s', __( 'Previous Post', 'the-bootstrap' ) ) ); ?></span>
+                        </nav><!-- #nav-single -->
+
+                        <?php tha_content_bottom(); ?>
+                </div><!-- #content -->
+                <?php tha_content_after(); ?>
+        </section><!-- #primary -->
+
+        <?php get_sidebar(); ?>
+    </div>
+</div>
+    <?php get_footer(); ?>
+</div>
+</div>
 
 
-/* End of file index.php */
-/* Location: ./wp-content/themes/the-bootstrap/single.php */

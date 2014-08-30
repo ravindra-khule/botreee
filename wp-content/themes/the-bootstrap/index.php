@@ -27,38 +27,78 @@ get_header(); ?>
             <li>
               <label>Work</label>
                 <ul>
-                    <?php
-                    $category_ids = get_all_category_ids();
-                    foreach($category_ids as $cat_id) {
-                      $cat_name = get_cat_name($cat_id);
-                      ?>
-                     <li><a href="#" data-group="<?php echo $cat_name;?>"><?php echo $cat_name;?></a></li>
-                      <?php
+                 <?php
+                    $args = array(
+                      'child_of' => 15,
+                        'hide_empty' => FALSE
+                      );
+                    $categories = get_categories($args);
+                    foreach($categories as $category){
+                        ?>
+                        <li><a href="#" data-group="<?php echo $category->cat_name;?>"><?php echo $category->cat_name;?></a></li>
+                        <?php
                     }
-                    ?> 
+                    ?>
                 </ul>              
             </li>
             <li>
               <ul>   
-                <?php wp_nav_menu(); ?>
-              </ul>
+                <?php
+                    $args = array(
+                      'child_of' => 16,
+                        'hide_empty' => FALSE
+                      );
+                    $categories = get_categories($args);
+                    foreach($categories as $category){
+                        ?>
+                        <li><a href="#" data-group="<?php echo $category->cat_name;?>"><?php echo $category->cat_name;?></a></li>
+                        <?php
+                    }
+                    ?>
+                </ul>   
+              
             </li>
             <li>
               <ul> 
-                <?php $args = array( 'menu' => 'about-us');?>
-                <?php wp_nav_menu($args); ?>
+                <?php
+                    $args = array(
+                      'child_of' => 30,
+                        'hide_empty' => FALSE
+                      );
+                    $categories = get_categories($args);
+                    foreach($categories as $category){
+                        ?>
+                        <li><a href="#" data-group="<?php echo $category->cat_name;?>"><?php echo $category->cat_name;?></a></li>
+                        <?php
+                    }
+                    ?>
+
               </ul>
             </li>
+             
            
             </ul>
           </li>
         </ul>
+        
+       
+        <div class="pull-right ">
+            <ul class="nav nav-pills ">
+                <li ><a  target="blank" href="http://mywordpress.com/contact/">Contact</a></li>
+                 <li ><a target="blank" href="http://mywordpress.com/custom-blog/">Blog</a></li>
+            </ul>
+        </div>
+        
+    
+        
       </div>
-   
+      
   </nav>
+  
 <div class="contentWrap">
     <div class="container">
     <h2>WORK</h2>
+     
       <div id="portfolio">
           <div class="grid effect-2 projectList" id="grid">
               <?php  
