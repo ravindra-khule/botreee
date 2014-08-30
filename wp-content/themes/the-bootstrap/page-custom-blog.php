@@ -2,7 +2,7 @@
 /** page.php
  Template Name:Custom template
  */
-
+/*comment passed */
 get_header(); ?>
 
 <div id="container">
